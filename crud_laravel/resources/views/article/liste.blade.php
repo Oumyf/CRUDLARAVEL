@@ -17,31 +17,29 @@
                 <thead>
                     <th>#</th>
                     <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Classe</th>
+                    <th>Description</th>
+                    <th>Date de création</th>
+                    <th>A la une</th>
                     <th>Actions</th>
                 </thead>
                 <tbody>
+                    @foreach($articles as $article)
                     <tr>
-                    <td>1</td>
-                    <td>FALL</td>
-                    <td>Adia Oumy</td>
-                    <td>Terminales</td>
-                    <td>
-                        <a href="#" class="btn btn-info">Update</a>
+                    <td>{{ $article->id }}</td>
+                    <td>{{ $article->nom }}</td>
+                    <td>{{ $article->description }}</td>
+                    <td>{{ $article->date_de_creation }}</td>
+                        @if($article->is_a_la_une)
+                    <td>oui</td>
+                    @else
+                    <td>non</td>
+                    @endif
+                                        <td>
+                        <a href="/update-article/{{{{ $article->id }}}}" class="btn btn-info">Update</a>
                         <a href="#" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="#" class="btn btn-info">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                  
-            
-                </tr>
+            @endforeach
                 </tbody>
             </table>
           </div>

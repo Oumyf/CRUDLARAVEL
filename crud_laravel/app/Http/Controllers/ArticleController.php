@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     public function listeArticle(){
-        return view('article.liste');
+        $articles = Article ::all();
+        return view('article.liste' , compact('articles'));
     }
 
     public function ajouterArticle(Request $request) {
@@ -57,6 +58,11 @@ class ArticleController extends Controller
         ]);
 
     
+    }
+
+    public function updateArticle($id){
+        $article = Article::find($id);
+        return view('article.update');
     }
 
  
