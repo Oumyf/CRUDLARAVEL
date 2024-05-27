@@ -43,7 +43,7 @@
                     @endif
                                         <td>
                         <a href="/update-article/{{ $article->id }}" class="btn btn-info">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="/delete-article/{{ $article->id }}" class="btn btn-danger">Update</a>
                     </td>
                 </tr>
             @endforeach
