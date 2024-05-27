@@ -13,7 +13,32 @@
           <div class="col">
             <h1>AJOUTER UN ARTICLE</h1>
 
-            @if(session('status'))
+            @if(session('status'))<form action="ajouter/traitement" method="POST" class="form-group" enctype="multipart/form-data"> 
+                @csrf
+                <div class="form-group">
+                    <label for="Nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="Nom" name="nom">
+                </div>
+                <div class="form-group">
+                    <label for="Description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="Description" name="description">
+                </div>
+                <div class="form-group">
+                    <label for="Date_de_creation" class="form-label">Date de création</label>
+                    <input type="date" class="form-control" id="Date_de_creation" name="date_de_creation">
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Veuillez mettre l'url de l'image</label>
+                    <input class="form-control" type="text" id="image" name="image">
+                </div>
+                <label for="is_a_la_une">L'article est-il à la une</label>
+                <input type="checkbox" id="is_a_la_une" name="is_a_la_une" value="1">
+                <br><br>
+                <button type="submit" class="btn btn-primary">Ajouter un article</button>
+                <br><br>
+                <a href="/etudiant" class="btn btn-danger">Retour</a>
+            </form>
+            
             <div class="alert alert-success">
                 {{ session('status') }}
             </div>

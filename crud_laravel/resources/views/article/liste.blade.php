@@ -27,6 +27,7 @@
                     <th>Description</th>
                     <th>Date de création</th>
                     <th>A la une</th>
+                    <th>Image</th>
                     <th>Actions</th>
                 </thead>
                 <tbody>
@@ -35,15 +36,16 @@
                     <td>{{ $article->id }}</td>
                     <td>{{ $article->nom }}</td>
                     <td>{{ $article->description }}</td>
+                    <td>{{ $article->image }}</td>
                     <td>{{ $article->date_de_creation }}</td>
                         @if($article->is_a_la_une)
                     <td>oui</td>
                     @else
                     <td>non</td>
                     @endif
-                                        <td>
-                        <a href="/update-article/{{ $article->id }}" class="btn btn-info">Update</a>
-                        <a href="/delete-article/{{ $article->id }}" class="btn btn-danger">Update</a>
+                        <td>
+                        <a href="/update-article/{{ $article->id }}" class="btn btn-info">Modifier</a>
+                        <a href="/delete-article/{{ $article->id }}" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
             @endforeach
