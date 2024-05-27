@@ -12,7 +12,14 @@
         <div class="row align-items-start">
           <div class="col">
             <h1>CRUD IN LARAVEL 11</h1>
+            <hr>
             <a href="/ajouter" class="btn btn-primary">Ajouter des articles</a>
+            <hr>
+            @if(session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+            @endif
             <table class="table">
                 <thead>
                     <th>#</th>
@@ -35,7 +42,7 @@
                     <td>non</td>
                     @endif
                                         <td>
-                        <a href="/update-article/{{{{ $article->id }}}}" class="btn btn-info">Update</a>
+                        <a href="/update-article/{{ $article->id }}" class="btn btn-info">Update</a>
                         <a href="#" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>

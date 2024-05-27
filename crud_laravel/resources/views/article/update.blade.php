@@ -28,22 +28,22 @@
             <form action="/modifier/traitement" method="GET" class="form-group" enctype="multipart/form-data"> 
                 @csrf
 
-                <input type="text" name="id" style="display: none;"  value="{{ $articles->id }}>
+                <input type="text" name="id" style="display: none;"  value="{{ $article->id }}>
                 <div class="form-group">
                   <label for="Nom" class="form-label">Nom</label>
-                  <input type="text" class="form-control" id="Nom" name="nom" value="{{ $articles->nom }}">
+                  <input type="text" class="form-control" id="Nom" name="nom" value="{{ $article->nom }}">
                 </div>
                 <div class="form-group">
                     <label for="Description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="Description" name="description" value="{{ $articles->description }}>
+                    <input type="text" class="form-control" id="Description" name="description" value="{{ $article->description }}">
                 </div>
                 <div class="form-group">
                     <label for="Date_de_creation" class="form-label">Date de création</label>
-                    <input type="date" class="form-control" id="Date_de_creation" name="date_de_creation" value="{{ $articles->date_de_creation }}>
+                    <input type="date" class="form-control" id="Date_de_creation" name="date_de_creation" value="{{ $article->date_de_creation }}">
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Veuillez mettre une image</label>
-                    <input class="form-control" type="file" id="formFile" name="image"  value="{{ $articles->image }}>
+                    <input class="form-control" type="file" id="formFile" name="image"  value="{{ $article->image }}">
                 </div>
                 <label for="is_a_la_une">L'article est-il à la une</label>
                 <input type="checkbox" id="is_a_la_une" name="is_a_la_une" value="1">
