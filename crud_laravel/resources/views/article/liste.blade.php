@@ -12,7 +12,7 @@
         <div class="row align-items-start">
           <div class="col">
             <h1>CRUD IN LARAVEL 11</h1>
-            <a href="/ajouter" class="btn btn-primary">Ajouter des étudiants</a>
+            <a href="/ajouter" class="btn btn-primary">Ajouter des articles</a>
             <table class="table">
                 <thead>
                     <th>#</th>
@@ -40,17 +40,7 @@
                 </tr>
                 <tr>
                   
-                    <td>
-                        <a href="#" class="btn btn-info">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                 
-                    <td>
-                        <a href="#" class="btn btn-info">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
+            
                 </tr>
                 </tbody>
             </table>
